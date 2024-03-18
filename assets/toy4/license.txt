@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pokemon Psybberduck - Toy
+* source:	https://sketchfab.com/3d-models/pokemon-psybberduck-toy-f0864db153a3416695e681c575009daf
+* author:	kuayarts (https://sketchfab.com/kuayarts)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pokemon Psybberduck - Toy" (https://sketchfab.com/3d-models/pokemon-psybberduck-toy-f0864db153a3416695e681c575009daf) by kuayarts (https://sketchfab.com/kuayarts) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

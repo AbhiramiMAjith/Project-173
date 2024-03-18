@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ar stuff</title>
+
+
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+        <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+        <link rel="stylesheet" href="./style.css"/>
+
+        <script src="./js/addButtons.js"></script>
+        <script src="./js/markerHandler.js"></script>
+        <script src="./js/addMarkers.js"></script>
+
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyB0gwZsJaUvUB4drIJDCuLO5E-Hxa4meZo",
+              authDomain: "ar-toy-store-7d28d.firebaseapp.com",
+              projectId: "ar-toy-store-7d28d",
+              storageBucket: "ar-toy-store-7d28d.appspot.com",
+              messagingSenderId: "209366208436",
+              appId: "1:209366208436:web:3710f440c57d2ca32dace1"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+          </script>
+    </head>
+
+    <body style="margin: 0px; overflow:hidden">
+
+        <a-scene vr-mode-ui="enabled:false" embedded arjs="sourceType:webcam;
+            sourceWidth:1280; sourceHeigth:960;
+            displayWidth:1280; displayHeight:960;
+            debugUIEnabled: false" gesture-detector create-buttons>            
+        
+
+            <a-entity camera></a-entity>
+
+            <!--<a-assets>
+                <a-asset-item id="penguin-model" src="./assets/toy1/scene.gltf"></a-asset-item>
+                <a-asset-item id="gun-model" src="./assets/toy2/scene.gltf"></a-asset-item>
+                <a-asset-item id="dino-model" src="./assets/toy3/scene.gltf"></a-asset-item>
+                <a-asset-item id="psyduck-model" src="./assets/toy4/scene.gltf"></a-asset-item>
+            </a-assets>
+
+            <a-marker id="penguin" type="pattern" url="assets/markers/pattern-penguin-soft-toy.patt" cursor="rayOrigin:mouse" markerhandler create-markers>
+                <a-entity id="penguin-3d-model" position="-1 0 0" scale="0.05 0.05 0.05" gltf-model="penguin-model" getsure-handler></a-entity>
+
+                <a-plane position="0 0.89 0.02" width="1.49" height="0.3" rotation="0 0 0" color="#F0C30F">
+                    <a-entity position="0 0 0.1" rotation="0 0 0" text=""></a-entity>
+                </a-plane>
+            </a-marker>
+
+            <a-marker id="dino" type="pattern" url="assets/markers/pattern-images (2).patt" cursor="rayOrigin:mouse" markerhandler create-markers>
+                <a-entity id="dino-3d-model" position="-1 0 0" scale="0.05 0.05 0.05" gltf-model="dino-model" getsure-handler></a-entity>
+
+                <a-plane position="0 0.89 0.02" width="1.49" height="0.3" rotation="0 0 0" color="#F0C30F">
+                    <a-entity position="0 0 0.1" rotation="0 0 0" text=""></a-entity>
+                </a-plane>
+            </a-marker>
+
+            <a-marker id="psyduck" type="pattern" url="assets/markers/pattern-999365e9e2d747af9d47764df8aef0a6_Original.patt" cursor="rayOrigin:mouse" markerhandler create-markers>
+                <a-entity id="psyduck-3d-model" position="-1 0 0" scale="0.05 0.05 0.05" gltf-model="psyduck-model" getsure-handler></a-entity>
+
+                <a-plane position="0 0.89 0.02" width="1.49" height="0.3" rotation="0 0 0" color="#F0C30F">
+                    <a-entity position="0 0 0.1" rotation="0 0 0" text=""></a-entity>
+                </a-plane>
+            </a-marker>
+
+            <a-marker id="gun" type="pattern" url="assets/markers/pattern-716XGigUY7L._AC_UF1000,1000_QL80_.patt" cursor="rayOrigin:mouse" markerhandler create-markers>
+                <a-entity id="gun-3d-model" position="-1 0 0" scale="0.05 0.05 0.05" gltf-model="gun-model" getsure-handler></a-entity>
+                
+                <a-plane position="0 0.89 0.02" width="1.49" height="0.3" rotation="0 0 0" color="#F0C30F">
+                    <a-entity position="0 0 0.1" rotation="0 0 0" text=""></a-entity>
+                </a-plane>
+            </a-marker>-->
+
+        </a-scene>
+        <div id="button-div" class="fixed-bottom"></div>
+
+        <div class="conatiner">
+            <div id="modal-div" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">0RDER SUMMARY</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="closeModal()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive">
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <td><strong>Item</strong></td>
+                                            <td class="text-center"><strong>Price</strong></td>
+                                            <td class="text-center"><strong>Quantity</strong></td>
+                                            <td class="text-right"><strong>Total</strong></td>
+                                        </tr>
+                                    </thead>
+                                    <t-body id="bill-table-body">
+
+                                    </t-body>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="pay-button" type="button" class="btn btn-primary">PAY NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="rating-modal-div" class="rating-modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Rate Toy</h5>
+                            <button id="rate-button" type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeRatingModal()">
+                                <span aria-hidden="true" >&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive">
+                                <textarea class="form-control" id="feedback-input" rows='3'></textarea>
+
+                                <input id="rating-input" name="rating-input" class="rating rating-loading"
+                                data-min="0" data-max="5" data-step="0.1" value="0"/>
+                                
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id=save-rating-button type="button" class="btn btn-primary">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function closeModal(){
+                document.getElementById("modal-div").style.display = 'none'
+            }
+        </script>
+        <script>
+            function closeRatingModal(){
+                document.getElementById("rating-modal-div").style.display = 'none'
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Toy Gun
+* source:	https://sketchfab.com/3d-models/toy-gun-2b4f4fdccde8429a84c17ef2e3363884
+* author:	Nelesh_surve (https://sketchfab.com/Nelesh_surve)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Toy Gun" (https://sketchfab.com/3d-models/toy-gun-2b4f4fdccde8429a84c17ef2e3363884) by Nelesh_surve (https://sketchfab.com/Nelesh_surve) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

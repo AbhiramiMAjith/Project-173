@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stuffed dino toy
+* source:	https://sketchfab.com/3d-models/stuffed-dino-toy-d69e9bb7bfc6451993bf84f3e763a28a
+* author:	Andrey.Chegodaev (https://sketchfab.com/Andrey.Chegodaev)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stuffed dino toy" (https://sketchfab.com/3d-models/stuffed-dino-toy-d69e9bb7bfc6451993bf84f3e763a28a) by Andrey.Chegodaev (https://sketchfab.com/Andrey.Chegodaev) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
